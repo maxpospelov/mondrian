@@ -121,6 +121,22 @@ public class PostgreSqlDialect extends JdbcDialectImpl {
         return super.getType(metaData, columnIndex);
     }
 
+    public boolean supportsGroupingSets() {
+        return true;
+    }
+
+    public boolean requiresGroupByAlias() {
+        return true;
+    }
+
+    public boolean allowsCountDistinct() {
+        return true;
+    }
+
+    public boolean allowsFromQuery() {
+        return false;
+    }
+
 }
 
 // End PostgreSqlDialect.java

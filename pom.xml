@@ -56,7 +56,7 @@
     <repository>
       <id>pentaho</id>
       <name>Pentaho repository</name>
-      <url>http://repository.pentaho.org/artifactory/repo</url>
+      <url>http://nexus.pentaho.org/content/groups/omni</url>
       <layout>default</layout>
     </repository>
   </distributionManagement>
@@ -254,7 +254,7 @@
       </releases>
       <id>pentaho</id>
       <name>Pentaho</name>
-      <url>http://repo.pentaho.org/artifactory/repo</url>
+      <url>http://nexus.pentaho.org/content/groups/omni</url>
       <layout>default</layout>
     </repository>
   </repositories>

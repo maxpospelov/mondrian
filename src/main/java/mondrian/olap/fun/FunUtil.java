@@ -16,7 +16,6 @@ import mondrian.calc.impl.UnaryTupleList;
 import mondrian.mdx.*;
 import mondrian.olap.*;
 import mondrian.olap.type.*;
-import mondrian.resource.MondrianResource;
 import mondrian.rolap.*;
 import mondrian.util.*;
 
