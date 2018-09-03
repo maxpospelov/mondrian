@@ -50,6 +50,18 @@ public class PostgreSqlDialect extends JdbcDialectImpl {
         return true;
     }
 
+    public boolean supportsGroupingSets() {
+        return true;
+    }
+
+    public boolean allowsCountDistinct() {
+        return true;
+    }
+
+    public boolean allowsFromQuery() {
+        return false;
+    }
+
     @Override
     protected String generateOrderByNulls(
         String expr,
