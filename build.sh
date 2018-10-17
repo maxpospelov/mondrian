@@ -10,7 +10,7 @@
 # All Rights Reserved.
 
 export SRCROOT=$(cd $(dirname $0); pwd)
-export PREFIX="E:" # E.g. "/usr" on Unix, "E:" on Windows
+export PREFIX="/usr" # E.g. "/usr" on Unix, "E:" on Windows
 case $(uname) in
 Windows_NT)
   export PS=";" ;;

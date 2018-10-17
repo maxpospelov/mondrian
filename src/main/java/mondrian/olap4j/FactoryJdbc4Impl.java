@@ -15,6 +15,7 @@ import org.olap4j.*;
 
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.Executor;
 
 /**
  * Implementation of {@link Factory} for JDBC 4.0.
@@ -90,6 +91,14 @@ class FactoryJdbc4Impl implements Factory {
         {
             super(olap4jConnection, headerList, rowList);
         }
+
+        public <T> T getObject(int i, Class<T> aClass) throws SQLException {
+            return null;
+        }
+
+        public <T> T getObject(String s, Class<T> aClass) throws SQLException {
+            return null;
+        }
     }
 
     private static class MondrianOlap4jConnectionJdbc4
@@ -103,6 +112,18 @@ class FactoryJdbc4Impl implements Factory {
         {
             super(factory, driver, url, info);
         }
+
+        public void abort(Executor executor) throws SQLException {
+
+        }
+
+        public void setNetworkTimeout(Executor executor, int i) throws SQLException {
+
+        }
+
+        public int getNetworkTimeout() throws SQLException {
+            return 0;
+        }
     }
 
     private static class MondrianOlap4jCellSetJdbc4
@@ -113,6 +134,14 @@ class FactoryJdbc4Impl implements Factory {
         {
             super(olap4jStatement);
         }
+
+        public <T> T getObject(int i, Class<T> aClass) throws SQLException {
+            return null;
+        }
+
+        public <T> T getObject(String s, Class<T> aClass) throws SQLException {
+            return null;
+        }
     }
 
     private static class MondrianOlap4jStatementJdbc4
@@ -122,6 +151,14 @@ class FactoryJdbc4Impl implements Factory {
             MondrianOlap4jConnection olap4jConnection)
         {
             super(olap4jConnection);
+        }
+
+        public void closeOnCompletion() throws SQLException {
+
+        }
+
+        public boolean isCloseOnCompletion() throws SQLException {
+            return false;
         }
     }
 
@@ -135,6 +172,14 @@ class FactoryJdbc4Impl implements Factory {
         {
             super(olap4jConnection, mdx);
         }
+
+        public void closeOnCompletion() throws SQLException {
+
+        }
+
+        public boolean isCloseOnCompletion() throws SQLException {
+            return false;
+        }
     }
 
     private static class MondrianOlap4jDatabaseMetaDataJdbc4
@@ -145,6 +190,14 @@ class FactoryJdbc4Impl implements Factory {
             RolapConnection mondrianConnection)
         {
             super(olap4jConnection, mondrianConnection);
+        }
+
+        public ResultSet getPseudoColumns(String s, String s1, String s2, String s3) throws SQLException {
+            return null;
+        }
+
+        public boolean generatedKeyAlwaysReturned() throws SQLException {
+            return false;
         }
     }
 }
